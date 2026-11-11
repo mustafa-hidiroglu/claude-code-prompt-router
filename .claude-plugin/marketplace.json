@@ -1,0 +1,14 @@
+{
+  "name": "claude-code-prompt-router",
+  "description": "Automatic Claude model routing (Haiku/Sonnet/Fable/Opus) for Claude Code. Local regex only, no external LLM or router.",
+  "owner": {
+    "name": "Mustafa Can Hidiroglu"
+  },
+  "plugins": [
+    {
+      "name": "prompt-router",
+      "source": "./",
+      "description": "Automatic model routing for Claude Code: Haiku, Sonnet, Fable or Opus per prompt. Local regex only, no external LLM or router."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "prompt-router",
+  "version": "0.1.0",
+  "description": "Automatic model routing for Claude Code: sends each prompt to Haiku, Sonnet, Fable or Opus by task complexity. Local regex only, requires no external LLM or router; falls back to the default model on any error.",
+  "author": {
+    "name": "Mustafa Can Hidiroglu"
+  },
+  "homepage": "https://github.com/mustafa-hidiroglu/claude-code-prompt-router",
+  "repository": "https://github.com/mustafa-hidiroglu/claude-code-prompt-router",
+  "license": "MIT",
+  "keywords": [
+    "model-router",
+    "prompt-router",
+    "llm-routing",
+    "cost-optimization",
+    "haiku",
+    "sonnet",
+    "opus",
+    "fable",
+    "claude-code",
+    "hooks",
+    "local",
+    "no-external-llm"
+  ],
+  "userConfig": {
+    "enabled": {
+      "type": "boolean",
+      "title": "Route prompts by complexity",
+      "description": "Off: every request uses the session's own model.",
+      "default": true
+    },
+    "showStatus": {
+      "type": "boolean",
+      "title": "Show the routed model in the status line",
+      "description": "Writes e.g. 'router: sonnet (coding)' after each prompt.",
+      "default": true
+    }
+  }
+}
