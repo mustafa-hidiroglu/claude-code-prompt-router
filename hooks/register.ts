@@ -52,7 +52,7 @@ export const register: Register = (on, options) => {
     } catch {
       return next(e) // fail-safe: prompt goes through untouched
     }
-  })
+  }).catch(($, e, next) => next(e)) // engine-level fail-safe: on a throw or overrun, the prompt passes unchanged
 
   // Decide once per main-loop turn.
   on('turn.start', ($, e, next) => {
